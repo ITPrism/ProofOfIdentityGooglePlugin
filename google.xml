@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.6" type="plugin" group="identityproof" method="upgrade">
+    <name>PLG_IDENTITYPROOF_GOOGLE</name>
+    <author>Todor Iliev</author>
+    <copyright>Copyright (C) 2017 Todor Iliev ( ITPrism.com ). All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-3.0.en.html GNU/GPLv3</license>
+    <authorEmail>todor@itprism.com</authorEmail>
+    <authorUrl>http://itprism.com</authorUrl>
+    <version>1.1</version>
+    <creationDate>19 January, 2017</creationDate>
+    <description><![CDATA[
+	<p>Proof of Identity - Google is a plugin that enables user verification via Google Plus.</p>
+	<p><a href="http://itprism.com/" target="_blank">Subscribe for the newsletter</a> to receive information about updates and new ITPrism extensions.</p>
+	<p>Please, <a href="http://extensions.joomla.org/extensions/extension/clients-a-communities/user-management/proof-of-identity" target="_blank">vote for the extension</a> on Joomla! Extensions Directory</p>
+	]]></description>
+    
+    <files>
+        <filename plugin="google">google.php</filename>
+		<folder>language</folder>
+		<folder>tmpl</folder>
+    </files>
+    
+    <help url="PLG_IDENTITYPROOF_GOOGLE_HELP_URL"/>
+
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="app_name" type="text" label="PLG_IDENTITYPROOF_GOOGLE_APP_NAME" description="PLG_IDENTITYPROOF_GOOGLE_APP_NAME_DESC" class="input-xxlarge"/>
+                <field name="client_id" type="text" label="PLG_IDENTITYPROOF_GOOGLE_CLIENT_ID" description="PLG_IDENTITYPROOF_GOOGLE_CLIENT_ID_DESC" class="input-xxlarge"/>
+                <field name="client_secret" type="text" label="PLG_IDENTITYPROOF_GOOGLE_CLIENT_SECRET" description="PLG_IDENTITYPROOF_GOOGLE_CLIENT_SECRET_DESC" class="input-xxlarge"/>
+            </fieldset>
+        </fields>
+    </config>
+
+    <updateservers>
+        <server type="extension" priority="1" name="Plugin - ProofOfIdentity - Twitter">http://cdn.itprism.com/updates/identityproof/plg_identityproof_twitter.xml</server>
+    </updateservers>
+</extension>
